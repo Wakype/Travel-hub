@@ -16,6 +16,25 @@
   }
 }
 
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+  color: #4a4a4a;
+}
+* {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  /* outline: red dashed 1px; */
+}
+/* 
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -24,4 +43,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
