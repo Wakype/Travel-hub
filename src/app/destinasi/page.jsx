@@ -9,6 +9,7 @@ import DUMMY_DATA from "../MOCKUP_DATA.json";
 import ProductCard from "../components/productCard.component";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 import DestinasiFilter from "./sections/destinasiFilter.section";
+import DestinasiFilterMobile from "./sections/destinasiFilterMobile.section";
 
 const duplicatedData = Array.from({ length: 25 }, () => ({
   ...DUMMY_DATA[0],
@@ -116,10 +117,13 @@ const Destinasi = () => {
         </div>
 
         <div className="flex w-[full] flex-col lg:flex-row lg:justify-between">
-          <DestinasiFilter />
+          <>
+            <DestinasiFilter />
+            <DestinasiFilterMobile />
+          </>
 
           <section className="flex w-full flex-col items-center space-y-20 lg:w-[70%] lg:items-end">
-            <div className="grid grid-cols-2 gap-4 lg:gap-8 lg:grid-cols-3">
+            <div className="grid grid-cols-2 gap-4 lg:grid-cols-3 lg:gap-8">
               {currentItems.map((_, i) => (
                 <ProductCard
                   key={i}
