@@ -3,6 +3,8 @@ import "./globals.css";
 import ProgressBarClient from "./components/progressbarClient";
 import ScrollToTopButton from "./components/scrollTop";
 import { CustomChakra } from "./components";
+import { Analytics } from "@vercel/analytics/react";
+
 import LayoutMobile from "./components/MobileNav";
 
 const quickSand = Quicksand({ subsets: ["latin"] });
@@ -20,6 +22,7 @@ export default function RootLayout({ children }) {
           <ProgressBarClient />
           <LayoutMobile />
           {children}
+          <Analytics />
           <ScrollToTopButton />
         </CustomChakra>
       </body>
